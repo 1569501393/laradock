@@ -1,0 +1,30 @@
++--------------------+
+| [38;5;47;01mDatabase[39;00m           |
++--------------------+
+| admin              |
+| bbs                |
+| default            |
+| disputes           |
+| disputes-bak       |
+| gozero             |
+| information_schema |
+| laravel_shop       |
+| laravel_shop_bak   |
+| laravel_shop_two   |
+| lf_store           |
+| lf_wp              |
+| liaofeng_erp       |
+| liaofeng_store     |
+| liaofeng_wp        |
+| mysql              |
+| performance_schema |
+| shanya             |
+| shop5              |
+| shop6              |
+| sys                |
+| test               |
+| weibo              |
+| wshop              |
+| wshop-wp           |
++--------------------+
+
