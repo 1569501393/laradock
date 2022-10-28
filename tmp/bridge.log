@@ -1,0 +1,76 @@
+[
+    {
+        "Name": "bridge",
+        "Id": "be4677d98bf837e1e88c7fe7702952e1aadec3327ac964322387312972b05878",
+        "Created": "2022-10-27T09:10:29.68738907+08:00",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "192.168.100.0/24",
+                    "Gateway": "192.168.100.1",
+                    "AuxiliaryAddresses": {
+                        "DefaultGatewayIPv4": "192.168.100.254"
+                    }
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "7fe7c576383d27fbba44ba0fe299d170c03180967ff877615d6b73fc8bbbeae2": {
+                "Name": "dreamy_goodall",
+                "EndpointID": "85dea78f85618bb244b66f0b2b4fe9ad906461af8c86847b50f65c83ccf46044",
+                "MacAddress": "02:42:c0:a8:64:05",
+                "IPv4Address": "192.168.100.5/24",
+                "IPv6Address": ""
+            },
+            "83d96e11c68b12bb4b146d0ca4bccb35840e9aacd3ca0af1b98f3d70b1bdb3ea": {
+                "Name": "jovial_mirzakhani",
+                "EndpointID": "e72dd571345b89a3b1334a3325149c0f0121056cea3a4bb04c5a3d3959530c7c",
+                "MacAddress": "02:42:c0:a8:64:03",
+                "IPv4Address": "192.168.100.3/24",
+                "IPv6Address": ""
+            },
+            "85674185298c553f4c1813e2c0277501911dbc38f7a75ef511bc8f86c63deb7d": {
+                "Name": "determined_khayyam",
+                "EndpointID": "a426750d74186da5e94dc0acf58ef6ba7c3006d6d203b19097d4281db181d3c4",
+                "MacAddress": "02:42:c0:a8:64:04",
+                "IPv4Address": "192.168.100.4/24",
+                "IPv6Address": ""
+            },
+            "89647bd423b2b761f333abf6088ee3e20cc835192172e0ddca769491dd351f61": {
+                "Name": "relaxed_lumiere",
+                "EndpointID": "28da8638545a0cac2b5085b0b5637050ed1115b3d3f0ba367decbb7e9293b98d",
+                "MacAddress": "02:42:c0:a8:64:06",
+                "IPv4Address": "192.168.100.6/24",
+                "IPv6Address": ""
+            },
+            "cc14aa34f5dff716f5fbdf09aad3988be46bc25d8cebe78bce4bf38e5f2fcc00": {
+                "Name": "runner30",
+                "EndpointID": "90c6ab1d86eef54e253ecfe414de778ba54d8e717ad26dc39c15dbd0146a62f4",
+                "MacAddress": "02:42:c0:a8:64:02",
+                "IPv4Address": "192.168.100.2/24",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {
+            "com.docker.network.bridge.default_bridge": "true",
+            "com.docker.network.bridge.enable_icc": "true",
+            "com.docker.network.bridge.enable_ip_masquerade": "true",
+            "com.docker.network.bridge.host_binding_ipv4": "0.0.0.0",
+            "com.docker.network.bridge.name": "docker0",
+            "com.docker.network.driver.mtu": "1500"
+        },
+        "Labels": {}
+    }
+]

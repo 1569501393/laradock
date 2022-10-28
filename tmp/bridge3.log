@@ -1,0 +1,52 @@
+[
+    {
+        "Name": "bridge",
+        "Id": "4068306129fd18d0ba55a117daa43af4e6cd5e2e279051cc81b264a3643f4ea3",
+        "Created": "2022-10-27T18:00:28.472628884+08:00",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "192.168.100.0/24",
+                    "Gateway": "192.168.100.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "4b2bb1097bac956831001ff873c340f10d43ed5a3c11a8b52b1a40dbee894dd9": {
+                "Name": "compassionate_aryabhata",
+                "EndpointID": "3528765d24062b37e8ef939ea063ee759e8c216c01e55b8f0ddf2eb69e613e98",
+                "MacAddress": "02:42:c0:a8:64:03",
+                "IPv4Address": "192.168.100.3/24",
+                "IPv6Address": ""
+            },
+            "cc14aa34f5dff716f5fbdf09aad3988be46bc25d8cebe78bce4bf38e5f2fcc00": {
+                "Name": "runner30",
+                "EndpointID": "770112194af12225001f7ce5c74928be749f952b0b507701a10393c5307b9019",
+                "MacAddress": "02:42:c0:a8:64:02",
+                "IPv4Address": "192.168.100.2/24",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {
+            "com.docker.network.bridge.default_bridge": "true",
+            "com.docker.network.bridge.enable_icc": "true",
+            "com.docker.network.bridge.enable_ip_masquerade": "true",
+            "com.docker.network.bridge.host_binding_ipv4": "0.0.0.0",
+            "com.docker.network.bridge.name": "docker0",
+            "com.docker.network.driver.mtu": "1500"
+        },
+        "Labels": {}
+    }
+]

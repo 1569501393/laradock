@@ -1,0 +1,91 @@
+[
+    {
+        "Name": "laradock_backend",
+        "Id": "b6cef509c798dff673d70181aaf16bf8abf6fb6b0bc6af7794c7490bdf45351a",
+        "Created": "2022-07-25T02:01:24.513039302+08:00",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "192.168.1.0/24",
+                    "Gateway": "192.168.1.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": true,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "1dbbfbda283b20666eb5d6edce4d080d2633afef1c008027c8ad0387ef6e8357": {
+                "Name": "laradock_php-fpm-80_1",
+                "EndpointID": "d79b5654c6cb4825104ff5568acffe416256aa9e1279f1705b0d4fbe374e2f60",
+                "MacAddress": "02:42:c0:a8:01:06",
+                "IPv4Address": "192.168.1.6/24",
+                "IPv6Address": ""
+            },
+            "2cf1462dff0d48288ab8a1ae01d0495f15120ac04c850c4e2f278b56957e5bc9": {
+                "Name": "laradock_redis_1",
+                "EndpointID": "60ed409607425e79957a3a37958b1984a2be834496198b7d1d6607ccc6e291f7",
+                "MacAddress": "02:42:c0:a8:01:02",
+                "IPv4Address": "192.168.1.2/24",
+                "IPv6Address": ""
+            },
+            "5c3c6ba56f2a4b489fb5756b15e6dae438bd9b268e3e359a62df8f5332028180": {
+                "Name": "laradock_php-fpm_1",
+                "EndpointID": "e62fa02c91df3916b5de20773fd927e1f50d663371e5530bbed7fd8a74d21048",
+                "MacAddress": "02:42:c0:a8:01:08",
+                "IPv4Address": "192.168.1.8/24",
+                "IPv6Address": ""
+            },
+            "5c5632d19f10201212824b44c8d583fb443eb421e00befd2a22414ec7440402a": {
+                "Name": "laradock_workspace_1",
+                "EndpointID": "9ade1224dfe973ff07726094dbc8b5d0233efd09bc436b2c7a2138d7e35c6222",
+                "MacAddress": "02:42:c0:a8:01:07",
+                "IPv4Address": "192.168.1.7/24",
+                "IPv6Address": ""
+            },
+            "64e6ebab21dc218f9ae60d1358c6c5fd670d8ebd91becb04cc574eb76e40c9a9": {
+                "Name": "laradock_php-fpm-81_1",
+                "EndpointID": "dbd7505e9e6f809e3a989a5cd48e99c19aecca0fcc9aedcb163d8e18c179cbe8",
+                "MacAddress": "02:42:c0:a8:01:05",
+                "IPv4Address": "192.168.1.5/24",
+                "IPv6Address": ""
+            },
+            "bc49d1ea3bb33b18dfe46c4e8c42a8d3199404803c896b30af71ff331d0ce389": {
+                "Name": "laradock_docker-in-docker_1",
+                "EndpointID": "6473053b2e39b39017cf9626e07d98b14d2d5a8616f5192053533dd2848ab234",
+                "MacAddress": "02:42:c0:a8:01:04",
+                "IPv4Address": "192.168.1.4/24",
+                "IPv6Address": ""
+            },
+            "c486ddf845df2e38a3ec19ed0cf9371727baf7dbff08c8824fb6d1b98142fedd": {
+                "Name": "laradock_mysql_1",
+                "EndpointID": "e78b4d5bc5941f66406af3cc975ec1bf6bf232b3adf00d6b2fbd68336830ccd3",
+                "MacAddress": "02:42:c0:a8:01:03",
+                "IPv4Address": "192.168.1.3/24",
+                "IPv6Address": ""
+            },
+            "d86fdf88640b73ca82cf45e7f53e8c08bf3bf1038bf5a0aac7019f57a93d05c1": {
+                "Name": "laradock_nginx_1",
+                "EndpointID": "c2e2beb8ba929c89e6b221ca466ee5c18a8c5f4b6665a4e5f515a7bf41cdd634",
+                "MacAddress": "02:42:c0:a8:01:09",
+                "IPv4Address": "192.168.1.9/24",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {},
+        "Labels": {
+            "com.docker.compose.network": "backend",
+            "com.docker.compose.project": "laradock",
+            "com.docker.compose.version": "1.25.0"
+        }
+    }
+]

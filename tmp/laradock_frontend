@@ -1,0 +1,49 @@
+[
+    {
+        "Name": "laradock_frontend",
+        "Id": "1ea5c6d1826601fe4bd85b59da8e05f6b914d3f77867ab4463fcb4fc06c07d76",
+        "Created": "2022-08-13T14:19:52.939528332+08:00",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "192.168.0.0/24",
+                    "Gateway": "192.168.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": true,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "5c5632d19f10201212824b44c8d583fb443eb421e00befd2a22414ec7440402a": {
+                "Name": "laradock_workspace_1",
+                "EndpointID": "8cad23d576eeaf56d1c37bb1b7697555a8036c9e6c6b30e62845280b0f7f766b",
+                "MacAddress": "02:42:c0:a8:00:02",
+                "IPv4Address": "192.168.0.2/24",
+                "IPv6Address": ""
+            },
+            "d86fdf88640b73ca82cf45e7f53e8c08bf3bf1038bf5a0aac7019f57a93d05c1": {
+                "Name": "laradock_nginx_1",
+                "EndpointID": "4055401379d87256b33b2aa65e43075729f13d03b44e4eaf02cf04b0a0f80633",
+                "MacAddress": "02:42:c0:a8:00:03",
+                "IPv4Address": "192.168.0.3/24",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {},
+        "Labels": {
+            "com.docker.compose.network": "frontend",
+            "com.docker.compose.project": "laradock",
+            "com.docker.compose.version": "1.25.0"
+        }
+    }
+]
