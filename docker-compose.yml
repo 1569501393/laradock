@@ -2594,51 +2594,22 @@ services:
         - DRONE_SERVER_HOST=http://jyqdrone.frp.codefriend.top 
         - DRONE_SERVER_PROTO=http 
         - DRONE_DEBUG=true
-    # drone-sshrunner:
-    #   image: drone/drone-runner-ssh
-    #   container_name: my-drone-sshrunner
-    #   restart: always
-    #   ports:
-    #     - 10081:3000
-    #   depends_on:
-    #     - drone
-    #   networks:
-    #     dronenet:
-    #       aliases:
-    #         - drone-sshrunner
-    #   links:
-    #     - docker-in-docker
-    #   volumes:
-    #     - /var/run/docker.sock:/var/run/docker.sock
-    #   environment:
-    #     - TZ=Asia/Shanghai
-    #     - DRONE_DEBUG=true
-    #     - DRONE_RPC_SECRET=${YOUR_SECRET}
-    #     - DRONE_RPC_HOST=${YOUR_IP}:10080
-    #     - DRONE_RPC_PROTO=http
-    #     - DRONE_RUNNER_CAPACITY=2
-    #     - DRONE_RUNNER_NAME=drone-sshrunner
-    # drone-runner:
-    #   image: drone/drone-runner-docker:1
-    #   container_name: my-drone-runner
-    #   restart: always
-    #   ports:
-    #     - 10082:3000
-    #   depends_on:
-    #     - drone
-    #   networks:
-    #     dronenet:
-    #       aliases:
-    #         - drone-runner
-    #   links:
-    #     - docker-in-docker
-    #   volumes:
-    #     - /var/run/docker.sock:/var/run/docker.sock
-    #   environment:
-    #     - TZ=Asia/Shanghai
-    #     - DRONE_DEBUG=true
-    #     - DRONE_RPC_SECRET=${YOUR_SECRET}
-    #     - DRONE_RPC_HOST=${YOUR_IP}:10080
-    #     - DRONE_RPC_PROTO=http
-    #     - DRONE_RUNNER_CAPACITY=2
-    #     - DRONE_RUNNER_NAME=drone-runner
+    drone-runner:
+      image: drone/drone-runner-docker:1
+      container_name: dronetest-runner
+      restart: always
+      networks: 
+        - frontend
+        - backend
+      depends_on:
+        - drone-server  #依赖drone_server，并在其后启动
+      volumes:
+        - /var/run/docker.sock:/var/run/docker.sock:rw
+      environment:
+        - DRONE_RPC_PROTO=https
+        - DRONE_RPC_HOST=jyqdrone.frp.codefriend.top
+        - DRONE_RPC_SECRET=676ce557a05b7b9c85551a30e5c7e58e
+        - DRONE_RUNNER_CAPACITY=2
+        - DRONE_RUNNER_NAME=my-first-runner
+      ports:
+        - "3030:3000"
