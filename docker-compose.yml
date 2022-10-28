@@ -2572,35 +2572,28 @@ services:
     #   ports:
     #     - "10022:22"
     #     - "13000:3000"
-    # drone:
-    #   image: drone/drone:1
-    #   container_name: my-drone
-    #   restart: always
-    #   ports:
-    #     - 10080:80
-    #     - 10443:443
-    #   networks:
-    #     dronenet:
-    #       aliases:
-    #         - drone
-    #   links:
-    #     - docker-in-docker
-    #   volumes:
-    #     - /var/run/docker.sock:/var/run/docker.sock
-    #     - /data1/drone/:/var/lib/drone
-    #   environment:
-    #     - TZ=Asia/Shanghai
-    #     - DRONE_DEBUG=true
-    #     - DRONE_LOGS_TRACE=true
-    #     - DRONE_LOGS_DEBUG=true
-    #     - DRONE_LOGS_PRETTY=true
-    #     - DRONE_GIT_ALWAYS_AUTH=false
-    #     - DRONE_RPC_SECRET=${YOUR_SECRET}
-    #     - DRONE_SERVER_HOST=${YOUR_IP}:10080
-    #     - DRONE_SERVER_PROTO=http
-    #     # - DRONE_GOGS_SERVER=http://${YOUR_IP}:3000
-    #     - DRONE_GOGS_SERVER=http://${YOUR_IP}:13000
-    #     - DRONE_USER_CREATE=username:${GOGS_ROOT},admin:true
+    drone-server:
+      image: drone/drone:2 #不要用latest,latest并非稳定版本
+      container_name: drone-server-test
+      restart: always
+      ports:
+        - "8080:80"
+        - "4433:443"
+      networks:
+        - frontend
+        - backend
+      links:
+        - docker-in-docker
+      volumes:
+        - /var/lib/drone:/var/lib/drone/:rw
+      environment:
+        - DRONE_USER_CREATE=username:admin,admin:true  #管理员账号，一般是你github用户名
+        - DRONE_GITHUB_CLIENT_ID=c22f1f82807fd44141da 
+        - DRONE_GITHUB_CLIENT_SECRET=65c0546156ed7569558c73a6782cdffb1340d366 
+        - DRONE_RPC_SECRET=676ce557a05b7b9c85551a30e5c7e58e 
+        - DRONE_SERVER_HOST=http://jyqdrone.frp.codefriend.top 
+        - DRONE_SERVER_PROTO=http 
+        - DRONE_DEBUG=true
     # drone-sshrunner:
     #   image: drone/drone-runner-ssh
     #   container_name: my-drone-sshrunner
