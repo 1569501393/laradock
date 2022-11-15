@@ -2574,10 +2574,10 @@ services:
     #     - "13000:3000"
     drone-server:
       image: drone/drone:2 #不要用latest,latest并非稳定版本
-      container_name: drone-server-test
+      container_name: drone-server
       restart: always
       ports:
-        - "8080:80"
+        - "8088:80"
         - "4433:443"
       networks:
         - frontend
@@ -2599,7 +2599,7 @@ services:
         - DRONE_DATABASE_DRIVER=mysql
     drone-runner:
       image: drone/drone-runner-docker:1
-      container_name: dronetest-runner
+      container_name: drone-runner
       restart: always
       networks: 
         - frontend
@@ -2612,7 +2612,17 @@ services:
         - DRONE_RPC_PROTO=https
         - DRONE_RPC_HOST=jyqdrone.frp.codefriend.top
         - DRONE_RPC_SECRET=676ce557a05b7b9c85551a30e5c7e58e
+        # 可选项，配置值为数值。用于限制 Runner 可以执行的并发 Pipeline 的数量。Runner 默认执行 2 个并发 Pipeline。
         - DRONE_RUNNER_CAPACITY=2
         - DRONE_RUNNER_NAME=my-first-runner
+        # 默认情况下，管理界面是禁用的。要启用管理界面界面，你必须使用用户名和密码配置 Runner。 https://drone.cool/runner/docker/configuration/dashboard/
+        - DRONE_UI_USERNAME=root
+        - DRONE_UI_PASSWORD=root
+        # Docker Runner 配置为记录运行时事件。你可以启用调试或跟踪级别日志以获取有关通过系统数据流的详细信息。
+        - DRONE_DEBUG=true 
+        - DRONE_TRACE=true
+        # 你可以启用 http 请求日志记录以获取 Drone Runner 和 Drone Server 之间的详细 http 通信详细信息。这会产生大量输出，并且只能用于解决通信问题。
+        - DRONE_RPC_DUMP_HTTP=true
+        - DRONE_RPC_DUMP_HTTP_BODY=true
       ports:
         - "3030:3000"
