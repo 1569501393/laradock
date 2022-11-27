@@ -1955,6 +1955,28 @@ services:
         - RUNNER_NAME=${COMPOSE_PROJECT_NAME}-runner
         - REGISTER_NON_INTERACTIVE=${GITLAB_REGISTER_NON_INTERACTIVE}
         - RUNNER_EXECUTOR=shell
+        #- RUNNER_EXECUTOR=docker
+      volumes:
+        - backend
+      volumes:
+        - ${DATA_PATH_HOST}/gitlab/runner:/etc/gitlab-runner
+        - /var/run/docker.sock:/var/run/docker.sock:rw
+      restart: always
+    gitlab-runner-docker:
+      image: gitlab/gitlab-runner:latest
+      environment:
+        - CI_SERVER_URL=${GITLAB_CI_SERVER_URL}
+        - REGISTRATION_TOKEN=${GITLAB_RUNNER_REGISTRATION_TOKEN}
+        - RUNNER_NAME=${COMPOSE_PROJECT_NAME}-runner-docker
+        - REGISTER_NON_INTERACTIVE=${GITLAB_REGISTER_NON_INTERACTIVE}
+#        - RUNNER_EXECUTOR=shell
+        - RUNNER_EXECUTOR=docker
+#        - DOCKER_IMAGE=alpine
+#        - DOCKER_IMAGE=registry.internal.codefriend.top/basic/workspace:v0.1.1-7.4
+        - DOCKER_IMAGE=docker
+        - DOCKER_NETWORK_MODE=laradock_backend
+      volumes:
+        - backend
       volumes:
         - ${DATA_PATH_HOST}/gitlab/runner:/etc/gitlab-runner
         - /var/run/docker.sock:/var/run/docker.sock:rw
