@@ -1,0 +1,50 @@
+{"severity":"INFO","time":"2022-12-09T01:00:01.725Z","correlation_id":"b52466832f5359077bc054478a1de7d2","message":"Ci::StuckBuilds::DropPendingService: Cleaning pending timed-out builds"}
+{"severity":"INFO","time":"2022-12-09T01:00:01.763Z","correlation_id":"78a8ce9114197977173ec995d657410e","message":"Refreshing trending projects"}
+{"severity":"INFO","time":"2022-12-09T01:20:05.921Z","correlation_id":"78b67f3c1abe402ca9759069db9eaf6d","message":"Ci::StuckBuilds::DropRunningService: Cleaning running, timed-out builds"}
+{"severity":"INFO","time":"2022-12-09T01:40:07.889Z","correlation_id":"62f27d5798e465a273cc9c0d5d95c744","message":"Ci::StuckBuilds::DropScheduledService: Cleaning scheduled, timed-out builds"}
+{"severity":"INFO","time":"2022-12-09T02:00:12.124Z","correlation_id":"d765e2fc57522069dea5bb90a5589301","message":"Ci::StuckBuilds::DropPendingService: Cleaning pending timed-out builds"}
+{"severity":"INFO","time":"2022-12-09T02:20:15.841Z","correlation_id":"bc2b8b47abe5f280c53e16a4fdc0f935","message":"Ci::StuckBuilds::DropRunningService: Cleaning running, timed-out builds"}
+{"severity":"DEBUG","time":"2022-12-09T02:32:36.122Z","correlation_id":null,"message":"ActiveRecord connection established"}
+{"severity":"DEBUG","time":"2022-12-09T02:33:35.844Z","correlation_id":null,"message":"ActiveRecord connection established"}
+{"severity":"INFO","time":"2022-12-09T02:40:13.579Z","correlation_id":"c21bfbb0c5495a236cb620b3ec7e8efa","message":"Ci::StuckBuilds::DropScheduledService: Cleaning scheduled, timed-out builds"}
+{"severity":"INFO","time":"2022-12-09T03:00:03.774Z","correlation_id":"5e9815ec5cb01af2faf8a11cbc7fc4fb","message":"Ci::StuckBuilds::DropPendingService: Cleaning pending timed-out builds"}
+{"severity":"INFO","time":"2022-12-09T03:20:08.115Z","correlation_id":"c4b07175a689038350818ff0ae61b8c0","message":"Ci::StuckBuilds::DropRunningService: Cleaning running, timed-out builds"}
+{"severity":"INFO","time":"2022-12-09T03:40:05.439Z","correlation_id":"82ab84281ace38239e35ff224d6abeed","message":"Ci::StuckBuilds::DropScheduledService: Cleaning scheduled, timed-out builds"}
+{"severity":"INFO","time":"2022-12-09T04:00:20.659Z","correlation_id":"ad25ce501da3cf1056a975fd9324103e","message":"Ci::StuckBuilds::DropPendingService: Cleaning pending timed-out builds"}
+{"severity":"INFO","time":"2022-12-09T04:20:24.807Z","correlation_id":"e95754ece6023099a13ceff319261bbc","message":"Ci::StuckBuilds::DropRunningService: Cleaning running, timed-out builds"}
+{"severity":"INFO","time":"2022-12-09T04:40:25.434Z","correlation_id":"16443411229b98a199787863a7340ff3","message":"Ci::StuckBuilds::DropScheduledService: Cleaning scheduled, timed-out builds"}
+{"severity":"INFO","time":"2022-12-09T05:00:25.187Z","correlation_id":"d52debe3df680bd920d53ce271948092","message":"Ci::StuckBuilds::DropPendingService: Cleaning pending timed-out builds"}
+{"severity":"INFO","time":"2022-12-09T05:20:25.355Z","correlation_id":"6bde2c04a226e1b169dfb7c54cb1268d","message":"Ci::StuckBuilds::DropRunningService: Cleaning running, timed-out builds"}
+{"severity":"INFO","time":"2022-12-09T05:40:28.581Z","correlation_id":"b78f1f869b4846bfedbf5c125bdf77c1","message":"Ci::StuckBuilds::DropScheduledService: Cleaning scheduled, timed-out builds"}
+{"severity":"INFO","time":"2022-12-09T06:00:32.237Z","correlation_id":"9cd6d5b94363566a7bd57799031ef8a7","message":"Ci::StuckBuilds::DropPendingService: Cleaning pending timed-out builds"}
+{"severity":"INFO","time":"2022-12-09T06:20:33.004Z","correlation_id":"c0536ebcf20ed26218720d20d2d582dc","message":"Ci::StuckBuilds::DropRunningService: Cleaning running, timed-out builds"}
+{"severity":"INFO","time":"2022-12-09T06:21:15.276Z","correlation_id":"d8c25fc1c8820d9aee0872eeba6f4494","message":"Syncing dynamic postgres partitions"}
+{"severity":"DEBUG","time":"2022-12-09T06:21:15.277Z","correlation_id":"d8c25fc1c8820d9aee0872eeba6f4494","message":"Switched database connection","connection_name":"main"}
+{"severity":"INFO","time":"2022-12-09T06:21:15.282Z","correlation_id":"d8c25fc1c8820d9aee0872eeba6f4494","message":"Checking state of dynamic postgres partitions","table_name":"audit_events"}
+{"severity":"DEBUG","time":"2022-12-09T06:21:15.423Z","correlation_id":"d8c25fc1c8820d9aee0872eeba6f4494","message":"Switched database connection","connection_name":"main"}
+{"severity":"INFO","time":"2022-12-09T06:21:15.427Z","correlation_id":"d8c25fc1c8820d9aee0872eeba6f4494","message":"Checking state of dynamic postgres partitions","table_name":"web_hook_logs"}
+{"severity":"DEBUG","time":"2022-12-09T06:21:15.467Z","correlation_id":"d8c25fc1c8820d9aee0872eeba6f4494","message":"Switched database connection","connection_name":"main"}
+{"severity":"INFO","time":"2022-12-09T06:21:15.469Z","correlation_id":"d8c25fc1c8820d9aee0872eeba6f4494","message":"Checking state of dynamic postgres partitions","table_name":"loose_foreign_keys_deleted_records"}
+{"severity":"DEBUG","time":"2022-12-09T06:21:15.482Z","correlation_id":"d8c25fc1c8820d9aee0872eeba6f4494","message":"Switched database connection","connection_name":"main"}
+{"severity":"INFO","time":"2022-12-09T06:21:15.482Z","correlation_id":"d8c25fc1c8820d9aee0872eeba6f4494","message":"Checking state of dynamic postgres partitions","table_name":"incident_management_pending_alert_escalations"}
+{"severity":"DEBUG","time":"2022-12-09T06:21:15.493Z","correlation_id":"d8c25fc1c8820d9aee0872eeba6f4494","message":"Switched database connection","connection_name":"main"}
+{"severity":"INFO","time":"2022-12-09T06:21:15.493Z","correlation_id":"d8c25fc1c8820d9aee0872eeba6f4494","message":"Checking state of dynamic postgres partitions","table_name":"incident_management_pending_issue_escalations"}
+{"severity":"DEBUG","time":"2022-12-09T06:21:15.504Z","correlation_id":"d8c25fc1c8820d9aee0872eeba6f4494","message":"Switched database connection","connection_name":"main"}
+{"severity":"INFO","time":"2022-12-09T06:21:15.504Z","correlation_id":"d8c25fc1c8820d9aee0872eeba6f4494","message":"Checking state of dynamic postgres partitions","table_name":"verification_codes"}
+{"severity":"INFO","time":"2022-12-09T06:21:15.516Z","correlation_id":"d8c25fc1c8820d9aee0872eeba6f4494","message":"Finished sync of dynamic postgres partitions"}
+{"severity":"DEBUG","time":"2022-12-09T06:21:15.516Z","correlation_id":"d8c25fc1c8820d9aee0872eeba6f4494","message":"Switched database connection","connection_name":"main"}
+{"severity":"DEBUG","time":"2022-12-09T06:21:15.521Z","correlation_id":"d8c25fc1c8820d9aee0872eeba6f4494","message":"Switched database connection","connection_name":"main"}
+{"severity":"DEBUG","time":"2022-12-09T06:21:15.536Z","correlation_id":"d8c25fc1c8820d9aee0872eeba6f4494","message":"Switched database connection","connection_name":"main"}
+{"severity":"INFO","time":"2022-12-09T06:40:35.802Z","correlation_id":"24cc7a7ff4b0e1e82fcf7df8e123fdcc","message":"Ci::StuckBuilds::DropScheduledService: Cleaning scheduled, timed-out builds"}
+{"severity":"INFO","time":"2022-12-09T07:00:18.464Z","correlation_id":"37332e582000c411763b335ea39d5593","message":"Ci::StuckBuilds::DropPendingService: Cleaning pending timed-out builds"}
+{"severity":"INFO","time":"2022-12-09T07:20:21.714Z","correlation_id":"55b2dcf22be16f9aa48cab368de6c07c","message":"Ci::StuckBuilds::DropRunningService: Cleaning running, timed-out builds"}
+{"severity":"INFO","time":"2022-12-09T07:40:18.662Z","correlation_id":"3999b74f5ca4f274bf7ea6cfc70e2313","message":"Ci::StuckBuilds::DropScheduledService: Cleaning scheduled, timed-out builds"}
+{"severity":"INFO","time":"2022-12-09T08:00:10.907Z","correlation_id":"3fbaae300e5141cbb9dc8ea0d02e73de","message":"Ci::StuckBuilds::DropPendingService: Cleaning pending timed-out builds"}
+{"severity":"INFO","time":"2022-12-09T08:20:17.030Z","correlation_id":"d38c66e382cf2fe22192ae6a6218afa4","message":"Ci::StuckBuilds::DropRunningService: Cleaning running, timed-out builds"}
+{"severity":"INFO","time":"2022-12-09T08:40:13.122Z","correlation_id":"86e1f530f223cf24607427ec0a06f9ff","message":"Ci::StuckBuilds::DropScheduledService: Cleaning scheduled, timed-out builds"}
+{"severity":"INFO","time":"2022-12-09T09:00:01.792Z","correlation_id":"6a73c55f91170629d3ffa9cf6e408b19","message":"Ci::StuckBuilds::DropPendingService: Cleaning pending timed-out builds"}
+{"severity":"INFO","time":"2022-12-09T09:20:06.474Z","correlation_id":"106368482e9e32ddec35a8981c305bef","message":"Ci::StuckBuilds::DropRunningService: Cleaning running, timed-out builds"}
+{"severity":"INFO","time":"2022-12-09T09:40:03.059Z","correlation_id":"338fdc9313bdd029feb9490d9b30c6ab","message":"Ci::StuckBuilds::DropScheduledService: Cleaning scheduled, timed-out builds"}
+{"severity":"INFO","time":"2022-12-09T10:00:28.580Z","correlation_id":"886c7a5b571e55fbbf8508f8f1e3851f","message":"Ci::StuckBuilds::DropPendingService: Cleaning pending timed-out builds"}
+{"severity":"INFO","time":"2022-12-09T10:20:31.074Z","correlation_id":"afc1168d7816e33bf90b507cbbb47c63","message":"Ci::StuckBuilds::DropRunningService: Cleaning running, timed-out builds"}
+{"severity":"INFO","time":"2022-12-09T10:40:28.869Z","correlation_id":"68b411fd22f4f56e60f971cf63eb60f7","message":"Ci::StuckBuilds::DropScheduledService: Cleaning scheduled, timed-out builds"}

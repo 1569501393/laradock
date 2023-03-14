@@ -1,0 +1,14 @@
+2022-11-18_07:53:59.64922 Server listening on 0.0.0.0 port 22.
+2022-11-18_07:53:59.64936 Server listening on :: port 22.
+2022-11-18_09:00:33.26668 Accepted publickey for git from 192.168.1.1 port 54180 ssh2: RSA SHA256:x/fm31mIPslES/2pnjuSpr1m/j8jlh4og/jhbNfioTE
+2022-11-18_09:00:34.37740 Received disconnect from 192.168.1.1 port 54180:11: disconnected by user
+2022-11-18_09:00:34.37741 Disconnected from user git 192.168.1.1 port 54180
+2022-11-18_09:13:10.18294 Accepted publickey for git from 192.168.1.1 port 58872 ssh2: RSA SHA256:x/fm31mIPslES/2pnjuSpr1m/j8jlh4og/jhbNfioTE
+2022-11-18_09:13:10.82634 Received disconnect from 192.168.1.1 port 58872:11: disconnected by user
+2022-11-18_09:13:10.82644 Disconnected from user git 192.168.1.1 port 58872
+2022-11-18_09:18:10.53335 Accepted publickey for git from 192.168.1.1 port 60708 ssh2: RSA SHA256:x/fm31mIPslES/2pnjuSpr1m/j8jlh4og/jhbNfioTE
+2022-11-18_09:18:10.59518 Received disconnect from 192.168.1.1 port 60708:11: disconnected by user
+2022-11-18_09:18:10.59520 Disconnected from user git 192.168.1.1 port 60708
+2022-11-18_09:39:05.57355 Accepted publickey for git from 192.168.1.1 port 40452 ssh2: RSA SHA256:x/fm31mIPslES/2pnjuSpr1m/j8jlh4og/jhbNfioTE
+2022-11-18_09:39:06.03621 Received disconnect from 192.168.1.1 port 40452:11: disconnected by user
+2022-11-18_09:39:06.03623 Disconnected from user git 192.168.1.1 port 40452

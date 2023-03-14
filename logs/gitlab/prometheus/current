@@ -1,0 +1,22 @@
+2022-12-09_01:00:01.95452 level=info ts=2022-12-09T01:00:01.954Z caller=compact.go:507 component=tsdb msg="write block" mint=1670536800661 maxt=1670544000000 ulid=01GKT6AY42C3AZFVASK8W02E2V duration=415.505848ms
+2022-12-09_01:00:01.97077 level=info ts=2022-12-09T01:00:01.970Z caller=head.go:847 component=tsdb msg="Head GC completed" duration=14.806761ms
+2022-12-09_03:00:01.90427 level=info ts=2022-12-09T03:00:01.903Z caller=compact.go:507 component=tsdb msg="write block" mint=1670544000661 maxt=1670551200000 ulid=01GKTD6N9W4QRAMD8FANDW4VYC duration=434.844623ms
+2022-12-09_03:00:01.93030 level=info ts=2022-12-09T03:00:01.930Z caller=head.go:847 component=tsdb msg="Head GC completed" duration=24.148624ms
+2022-12-09_03:00:01.95871 level=info ts=2022-12-09T03:00:01.958Z caller=checkpoint.go:95 component=tsdb msg="Creating checkpoint" from_segment=46 to_segment=47 mint=1670551200000
+2022-12-09_03:00:03.60754 level=info ts=2022-12-09T03:00:03.607Z caller=head.go:944 component=tsdb msg="WAL checkpoint complete" first=46 last=47 duration=1.649129291s
+2022-12-09_05:00:02.02229 level=info ts=2022-12-09T05:00:02.021Z caller=compact.go:507 component=tsdb msg="write block" mint=1670551200661 maxt=1670558400000 ulid=01GKTM2CHDCC7XZNFMTZRS0TZ6 duration=568.019356ms
+2022-12-09_05:00:02.07059 level=info ts=2022-12-09T05:00:02.069Z caller=head.go:847 component=tsdb msg="Head GC completed" duration=33.135878ms
+2022-12-09_05:00:03.44553 level=info ts=2022-12-09T05:00:03.445Z caller=compact.go:448 component=tsdb msg="compact blocks" count=3 mint=1670522400661 maxt=1670544000000 ulid=01GKTM2D65BC5XQ4GKNJCCXMB9 sources="[01GKSRKFGMH1DS1XTBBESZAC06 01GKSZF6S3EERYPMGYMNJ0KASC 01GKT6AY42C3AZFVASK8W02E2V]" duration=1.328409233s
+2022-12-09_05:00:03.45804 level=info ts=2022-12-09T05:00:03.457Z caller=db.go:1212 component=tsdb msg="Deleting obsolete block" block=01GKT6AY42C3AZFVASK8W02E2V
+2022-12-09_05:00:03.46548 level=info ts=2022-12-09T05:00:03.465Z caller=db.go:1212 component=tsdb msg="Deleting obsolete block" block=01GKSRKFGMH1DS1XTBBESZAC06
+2022-12-09_05:00:03.47522 level=info ts=2022-12-09T05:00:03.475Z caller=db.go:1212 component=tsdb msg="Deleting obsolete block" block=01GKSZF6S3EERYPMGYMNJ0KASC
+2022-12-09_05:00:07.31478 level=info ts=2022-12-09T05:00:07.314Z caller=compact.go:448 component=tsdb msg="compact blocks" count=3 mint=1670479200661 maxt=1670544000000 ulid=01GKTM2EGK3WXAXTDSE7DJM8Y6 sources="[01GKSAW1PZKWQ9WAAX2TV0AWSE 01GKSZF8VZ8FJMDAXGMK42BJPZ 01GKTM2D65BC5XQ4GKNJCCXMB9]" duration=3.839330784s
+2022-12-09_05:00:07.32800 level=info ts=2022-12-09T05:00:07.327Z caller=db.go:1212 component=tsdb msg="Deleting obsolete block" block=01GKSZF8VZ8FJMDAXGMK42BJPZ
+2022-12-09_05:00:07.33890 level=info ts=2022-12-09T05:00:07.338Z caller=db.go:1212 component=tsdb msg="Deleting obsolete block" block=01GKTM2D65BC5XQ4GKNJCCXMB9
+2022-12-09_05:00:07.34876 level=info ts=2022-12-09T05:00:07.348Z caller=db.go:1212 component=tsdb msg="Deleting obsolete block" block=01GKSAW1PZKWQ9WAAX2TV0AWSE
+2022-12-09_07:00:01.97492 level=info ts=2022-12-09T07:00:01.974Z caller=compact.go:507 component=tsdb msg="write block" mint=1670558400661 maxt=1670565600000 ulid=01GKTTY3SZZJXFBCS662H8ZFEE duration=502.477645ms
+2022-12-09_07:00:02.00199 level=info ts=2022-12-09T07:00:02.001Z caller=head.go:847 component=tsdb msg="Head GC completed" duration=24.982996ms
+2022-12-09_07:00:02.03178 level=info ts=2022-12-09T07:00:02.031Z caller=checkpoint.go:95 component=tsdb msg="Creating checkpoint" from_segment=48 to_segment=49 mint=1670565600000
+2022-12-09_07:00:05.44706 level=info ts=2022-12-09T07:00:05.446Z caller=head.go:944 component=tsdb msg="WAL checkpoint complete" first=48 last=49 duration=3.41636307s
+2022-12-09_09:00:01.97392 level=info ts=2022-12-09T09:00:01.973Z caller=compact.go:507 component=tsdb msg="write block" mint=1670565600661 maxt=1670572800000 ulid=01GKV1SV2674SXF5T2VJ17HR3F duration=494.80792ms
+2022-12-09_09:00:01.99487 level=info ts=2022-12-09T09:00:01.994Z caller=head.go:847 component=tsdb msg="Head GC completed" duration=19.091236ms

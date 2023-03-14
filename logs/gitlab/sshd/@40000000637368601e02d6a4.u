@@ -1,0 +1,10 @@
+2022-11-15_09:35:33.56230 Server listening on 0.0.0.0 port 22.
+2022-11-15_09:35:33.56236 Server listening on :: port 22.
+2022-11-15_09:57:10.42889 Connection closed by authenticating user git 192.168.1.1 port 33190 [preauth]
+2022-11-15_09:58:53.64682 Accepted publickey for git from 192.168.1.1 port 33252 ssh2: RSA SHA256:x/fm31mIPslES/2pnjuSpr1m/j8jlh4og/jhbNfioTE
+2022-11-15_09:58:53.93431 Received disconnect from 192.168.1.1 port 33252:11: disconnected by user
+2022-11-15_09:58:53.93433 Disconnected from user git 192.168.1.1 port 33252
+2022-11-15_10:00:33.52105 Accepted publickey for git from 192.168.1.1 port 33312 ssh2: RSA SHA256:x/fm31mIPslES/2pnjuSpr1m/j8jlh4og/jhbNfioTE
+2022-11-15_10:00:34.56406 Received disconnect from 192.168.1.1 port 33312:11: disconnected by user
+2022-11-15_10:00:34.56408 Disconnected from user git 192.168.1.1 port 33312
+2022-11-15_10:22:08.22506 Received signal 15; terminating.

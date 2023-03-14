@@ -1,0 +1,360 @@
+2022-11-15_09:39:04.90135 t=2022-11-15T09:39:04+0000 lvl=info msg="Starting Grafana" logger=server version=7.5.11 commit=6f8c1d9fe4 branch=HEAD compiled=2021-10-05T11:14:33+0000
+2022-11-15_09:39:04.90138 t=2022-11-15T09:39:04+0000 lvl=info msg="Config loaded from" logger=settings file=/var/opt/gitlab/grafana/conf/defaults.ini
+2022-11-15_09:39:04.90138 t=2022-11-15T09:39:04+0000 lvl=info msg="Config loaded from" logger=settings file=/var/opt/gitlab/grafana/grafana.ini
+2022-11-15_09:39:04.90139 t=2022-11-15T09:39:04+0000 lvl=info msg="Path Home" logger=settings path=/var/opt/gitlab/grafana
+2022-11-15_09:39:04.90139 t=2022-11-15T09:39:04+0000 lvl=info msg="Path Data" logger=settings path=/var/opt/gitlab/grafana/data
+2022-11-15_09:39:04.90139 t=2022-11-15T09:39:04+0000 lvl=info msg="Path Logs" logger=settings path=/var/log/gitlab/grafana
+2022-11-15_09:39:04.90139 t=2022-11-15T09:39:04+0000 lvl=info msg="Path Plugins" logger=settings path=/var/opt/gitlab/grafana/data/plugins
+2022-11-15_09:39:04.90139 t=2022-11-15T09:39:04+0000 lvl=info msg="Path Provisioning" logger=settings path=/var/opt/gitlab/grafana/provisioning
+2022-11-15_09:39:04.90139 t=2022-11-15T09:39:04+0000 lvl=info msg="App mode production" logger=settings
+2022-11-15_09:39:04.90139 t=2022-11-15T09:39:04+0000 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+2022-11-15_09:39:04.90140 t=2022-11-15T09:39:04+0000 lvl=info msg="Creating SQLite database file" logger=sqlstore path=/var/opt/gitlab/grafana/data/grafana.db
+2022-11-15_09:39:04.90140 t=2022-11-15T09:39:04+0000 lvl=info msg="Starting DB migrations" logger=migrator
+2022-11-15_09:39:04.90140 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="create migration_log table"
+2022-11-15_09:39:04.90140 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="create user table"
+2022-11-15_09:39:04.90140 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="add unique index user.login"
+2022-11-15_09:39:04.90140 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="add unique index user.email"
+2022-11-15_09:39:04.90141 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="drop index UQE_user_login - v1"
+2022-11-15_09:39:04.90141 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="drop index UQE_user_email - v1"
+2022-11-15_09:39:04.90141 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="Rename table user to user_v1 - v1"
+2022-11-15_09:39:04.90141 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="create user table v2"
+2022-11-15_09:39:04.90141 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="create index UQE_user_login - v2"
+2022-11-15_09:39:04.90141 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="create index UQE_user_email - v2"
+2022-11-15_09:39:04.90142 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="copy data_source v1 to v2"
+2022-11-15_09:39:04.90142 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="Drop old table user_v1"
+2022-11-15_09:39:04.90142 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="Add column help_flags1 to user table"
+2022-11-15_09:39:04.90142 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="Update user table charset"
+2022-11-15_09:39:04.90142 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="Add last_seen_at column to user"
+2022-11-15_09:39:04.90142 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="Add missing user data"
+2022-11-15_09:39:04.90143 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="Add is_disabled column to user"
+2022-11-15_09:39:04.90143 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="Add index user.login/user.email"
+2022-11-15_09:39:04.90143 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="create temp user table v1-7"
+2022-11-15_09:39:04.90143 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="create index IDX_temp_user_email - v1-7"
+2022-11-15_09:39:04.90143 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="create index IDX_temp_user_org_id - v1-7"
+2022-11-15_09:39:04.90146 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="create index IDX_temp_user_code - v1-7"
+2022-11-15_09:39:04.90146 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="create index IDX_temp_user_status - v1-7"
+2022-11-15_09:39:04.90146 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="Update temp_user table charset"
+2022-11-15_09:39:04.90147 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="drop index IDX_temp_user_email - v1"
+2022-11-15_09:39:04.90147 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="drop index IDX_temp_user_org_id - v1"
+2022-11-15_09:39:04.90147 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="drop index IDX_temp_user_code - v1"
+2022-11-15_09:39:04.90147 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="drop index IDX_temp_user_status - v1"
+2022-11-15_09:39:04.90147 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="Rename table temp_user to temp_user_tmp_qwerty - v1"
+2022-11-15_09:39:04.90148 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="create temp_user v2"
+2022-11-15_09:39:04.90148 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="create index IDX_temp_user_email - v2"
+2022-11-15_09:39:04.90148 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="create index IDX_temp_user_org_id - v2"
+2022-11-15_09:39:04.90148 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="create index IDX_temp_user_code - v2"
+2022-11-15_09:39:04.90148 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="create index IDX_temp_user_status - v2"
+2022-11-15_09:39:04.90148 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="copy temp_user v1 to v2"
+2022-11-15_09:39:04.90149 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="drop temp_user_tmp_qwerty"
+2022-11-15_09:39:04.90149 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="Set created for temp users that will otherwise prematurely expire"
+2022-11-15_09:39:04.90149 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="create star table"
+2022-11-15_09:39:04.90149 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="add unique index star.user_id_dashboard_id"
+2022-11-15_09:39:04.90149 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="create org table v1"
+2022-11-15_09:39:04.90150 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="create index UQE_org_name - v1"
+2022-11-15_09:39:04.90150 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="create org_user table v1"
+2022-11-15_09:39:04.90150 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="create index IDX_org_user_org_id - v1"
+2022-11-15_09:39:04.90150 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="create index UQE_org_user_org_id_user_id - v1"
+2022-11-15_09:39:04.90150 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="Update org table charset"
+2022-11-15_09:39:04.90151 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="Update org_user table charset"
+2022-11-15_09:39:04.90151 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="Migrate all Read Only Viewers to Viewers"
+2022-11-15_09:39:04.90151 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="create dashboard table"
+2022-11-15_09:39:04.90151 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="add index dashboard.account_id"
+2022-11-15_09:39:04.90152 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="add unique index dashboard_account_id_slug"
+2022-11-15_09:39:04.90152 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="create dashboard_tag table"
+2022-11-15_09:39:04.90152 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="add unique index dashboard_tag.dasboard_id_term"
+2022-11-15_09:39:04.90152 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="drop index UQE_dashboard_tag_dashboard_id_term - v1"
+2022-11-15_09:39:04.90153 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="Rename table dashboard to dashboard_v1 - v1"
+2022-11-15_09:39:04.90153 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="create dashboard v2"
+2022-11-15_09:39:04.90153 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="create index IDX_dashboard_org_id - v2"
+2022-11-15_09:39:04.90153 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="create index UQE_dashboard_org_id_slug - v2"
+2022-11-15_09:39:04.90153 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="copy dashboard v1 to v2"
+2022-11-15_09:39:04.90154 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="drop table dashboard_v1"
+2022-11-15_09:39:04.90154 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="alter dashboard.data to mediumtext v1"
+2022-11-15_09:39:04.90154 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="Add column updated_by in dashboard - v2"
+2022-11-15_09:39:04.90154 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="Add column created_by in dashboard - v2"
+2022-11-15_09:39:04.90155 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="Add column gnetId in dashboard"
+2022-11-15_09:39:04.90155 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="Add index for gnetId in dashboard"
+2022-11-15_09:39:04.90155 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="Add column plugin_id in dashboard"
+2022-11-15_09:39:04.91493 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="Add index for plugin_id in dashboard"
+2022-11-15_09:39:04.92751 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="Add index for dashboard_id in dashboard_tag"
+2022-11-15_09:39:04.94009 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="Update dashboard table charset"
+2022-11-15_09:39:04.95223 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="Update dashboard_tag table charset"
+2022-11-15_09:39:04.96488 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="Add column folder_id in dashboard"
+2022-11-15_09:39:04.97739 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="Add column isFolder in dashboard"
+2022-11-15_09:39:04.98989 t=2022-11-15T09:39:04+0000 lvl=info msg="Executing migration" logger=migrator id="Add column has_acl in dashboard"
+2022-11-15_09:39:05.00315 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="Add column uid in dashboard"
+2022-11-15_09:39:05.01642 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="Update uid column values in dashboard"
+2022-11-15_09:39:05.02940 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="Add unique index dashboard_org_id_uid"
+2022-11-15_09:39:05.04185 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="Remove unique index org_id_slug"
+2022-11-15_09:39:05.05382 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="Update dashboard title length"
+2022-11-15_09:39:05.06584 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="Add unique index for dashboard_org_id_title_folder_id"
+2022-11-15_09:39:05.07785 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="create dashboard_provisioning"
+2022-11-15_09:39:05.09029 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="Rename table dashboard_provisioning to dashboard_provisioning_tmp_qwerty - v1"
+2022-11-15_09:39:05.10275 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="create dashboard_provisioning v2"
+2022-11-15_09:39:05.11478 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="create index IDX_dashboard_provisioning_dashboard_id - v2"
+2022-11-15_09:39:05.12722 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="create index IDX_dashboard_provisioning_dashboard_id_name - v2"
+2022-11-15_09:39:05.14001 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="copy dashboard_provisioning v1 to v2"
+2022-11-15_09:39:05.15231 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="drop dashboard_provisioning_tmp_qwerty"
+2022-11-15_09:39:05.16494 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="Add check_sum column"
+2022-11-15_09:39:05.17752 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="Add index for dashboard_title"
+2022-11-15_09:39:05.19583 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="delete tags for deleted dashboards"
+2022-11-15_09:39:05.21388 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="delete stars for deleted dashboards"
+2022-11-15_09:39:05.22597 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="create data_source table"
+2022-11-15_09:39:05.23841 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="add index data_source.account_id"
+2022-11-15_09:39:05.25663 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="add unique index data_source.account_id_name"
+2022-11-15_09:39:05.26987 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="drop index IDX_data_source_account_id - v1"
+2022-11-15_09:39:05.28370 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="drop index UQE_data_source_account_id_name - v1"
+2022-11-15_09:39:05.29787 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="Rename table data_source to data_source_v1 - v1"
+2022-11-15_09:39:05.31176 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="create data_source table v2"
+2022-11-15_09:39:05.32498 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="create index IDX_data_source_org_id - v2"
+2022-11-15_09:39:05.33902 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="create index UQE_data_source_org_id_name - v2"
+2022-11-15_09:39:05.35124 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="copy data_source v1 to v2"
+2022-11-15_09:39:05.36339 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="Drop old table data_source_v1 #2"
+2022-11-15_09:39:05.37549 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="Add column with_credentials"
+2022-11-15_09:39:05.38842 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="Add secure json data column"
+2022-11-15_09:39:05.40043 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="Update data_source table charset"
+2022-11-15_09:39:05.41424 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="Update initial version to 1"
+2022-11-15_09:39:05.42634 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="Add read_only data column"
+2022-11-15_09:39:05.44057 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="Migrate logging ds to loki ds"
+2022-11-15_09:39:05.45227 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="Update json_data with nulls"
+2022-11-15_09:39:05.46390 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="Add uid column"
+2022-11-15_09:39:05.47579 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="Update uid value"
+2022-11-15_09:39:05.48741 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="Add unique index datasource_org_id_uid"
+2022-11-15_09:39:05.49951 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="add unique index datasource_org_id_is_default"
+2022-11-15_09:39:05.51165 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="create api_key table"
+2022-11-15_09:39:05.52374 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="add index api_key.account_id"
+2022-11-15_09:39:05.53578 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="add index api_key.key"
+2022-11-15_09:39:05.54787 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="add index api_key.account_id_name"
+2022-11-15_09:39:05.56012 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="drop index IDX_api_key_account_id - v1"
+2022-11-15_09:39:05.57250 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="drop index UQE_api_key_key - v1"
+2022-11-15_09:39:05.58523 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="drop index UQE_api_key_account_id_name - v1"
+2022-11-15_09:39:05.60331 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="Rename table api_key to api_key_v1 - v1"
+2022-11-15_09:39:05.61691 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="create api_key table v2"
+2022-11-15_09:39:05.62973 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="create index IDX_api_key_org_id - v2"
+2022-11-15_09:39:05.64141 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="create index UQE_api_key_key - v2"
+2022-11-15_09:39:05.65501 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="create index UQE_api_key_org_id_name - v2"
+2022-11-15_09:39:05.66806 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="copy api_key v1 to v2"
+2022-11-15_09:39:05.68072 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="Drop old table api_key_v1"
+2022-11-15_09:39:05.69341 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="Update api_key table charset"
+2022-11-15_09:39:05.71190 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="Add expires to api_key table"
+2022-11-15_09:39:05.72534 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="create dashboard_snapshot table v4"
+2022-11-15_09:39:05.73840 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="drop table dashboard_snapshot_v4 #1"
+2022-11-15_09:39:05.75392 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="create dashboard_snapshot table v5 #2"
+2022-11-15_09:39:05.76737 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="create index UQE_dashboard_snapshot_key - v5"
+2022-11-15_09:39:05.78208 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="create index UQE_dashboard_snapshot_delete_key - v5"
+2022-11-15_09:39:05.79538 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="create index IDX_dashboard_snapshot_user_id - v5"
+2022-11-15_09:39:05.80874 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="alter dashboard_snapshot to mediumtext v2"
+2022-11-15_09:39:05.82694 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="Update dashboard_snapshot table charset"
+2022-11-15_09:39:05.84391 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="Add column external_delete_url to dashboard_snapshots table"
+2022-11-15_09:39:05.85743 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="Add encrypted dashboard json column"
+2022-11-15_09:39:05.86950 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="Change dashboard_encrypted column to MEDIUMBLOB"
+2022-11-15_09:39:05.88235 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="create quota table v1"
+2022-11-15_09:39:05.89402 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="create index UQE_quota_org_id_user_id_target - v1"
+2022-11-15_09:39:05.90818 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="Update quota table charset"
+2022-11-15_09:39:05.92067 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="create plugin_setting table"
+2022-11-15_09:39:05.93365 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="create index UQE_plugin_setting_org_id_plugin_id - v1"
+2022-11-15_09:39:05.94711 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="Add column plugin_version to plugin_settings"
+2022-11-15_09:39:05.95996 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="Update plugin_setting table charset"
+2022-11-15_09:39:05.97169 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="create session table"
+2022-11-15_09:39:05.98796 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="Drop old table playlist table"
+2022-11-15_09:39:05.99957 t=2022-11-15T09:39:05+0000 lvl=info msg="Executing migration" logger=migrator id="Drop old table playlist_item table"
+2022-11-15_09:39:06.01157 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="create playlist table v2"
+2022-11-15_09:39:06.02421 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="create playlist item table v2"
+2022-11-15_09:39:06.03719 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="Update playlist table charset"
+2022-11-15_09:39:06.04913 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="Update playlist_item table charset"
+2022-11-15_09:39:06.06081 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="drop preferences table v2"
+2022-11-15_09:39:06.07244 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="drop preferences table v3"
+2022-11-15_09:39:06.08400 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="create preferences table v3"
+2022-11-15_09:39:06.09669 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="Update preferences table charset"
+2022-11-15_09:39:06.10917 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="Add column team_id in preferences"
+2022-11-15_09:39:06.12220 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="Update team_id column values in preferences"
+2022-11-15_09:39:06.13359 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="create alert table v1"
+2022-11-15_09:39:06.14629 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="add index alert org_id & id "
+2022-11-15_09:39:06.15847 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="add index alert state"
+2022-11-15_09:39:06.17036 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="add index alert dashboard_id"
+2022-11-15_09:39:06.18390 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="Create alert_rule_tag table v1"
+2022-11-15_09:39:06.19874 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="Add unique index alert_rule_tag.alert_id_tag_id"
+2022-11-15_09:39:06.22421 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="drop index UQE_alert_rule_tag_alert_id_tag_id - v1"
+2022-11-15_09:39:06.23737 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="Rename table alert_rule_tag to alert_rule_tag_v1 - v1"
+2022-11-15_09:39:06.25079 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="Create alert_rule_tag table v2"
+2022-11-15_09:39:06.26424 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="create index UQE_alert_rule_tag_alert_id_tag_id - Add unique index alert_rule_tag.alert_id_tag_id V2"
+2022-11-15_09:39:06.27590 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="copy alert_rule_tag v1 to v2"
+2022-11-15_09:39:06.28789 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="drop table alert_rule_tag_v1"
+2022-11-15_09:39:06.29983 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="create alert_notification table v1"
+2022-11-15_09:39:06.31185 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="Add column is_default"
+2022-11-15_09:39:06.32456 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="Add column frequency"
+2022-11-15_09:39:06.34038 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="Add column send_reminder"
+2022-11-15_09:39:06.35521 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="Add column disable_resolve_message"
+2022-11-15_09:39:06.36913 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="add index alert_notification org_id & name"
+2022-11-15_09:39:06.38225 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="Update alert table charset"
+2022-11-15_09:39:06.39486 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="Update alert_notification table charset"
+2022-11-15_09:39:06.40754 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="create notification_journal table v1"
+2022-11-15_09:39:06.41966 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="add index notification_journal org_id & alert_id & notifier_id"
+2022-11-15_09:39:06.43209 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="drop alert_notification_journal"
+2022-11-15_09:39:06.45222 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="create alert_notification_state table v1"
+2022-11-15_09:39:06.46869 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="add index alert_notification_state org_id & alert_id & notifier_id"
+2022-11-15_09:39:06.48121 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="Add for to alert table"
+2022-11-15_09:39:06.49442 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="Add column uid in alert_notification"
+2022-11-15_09:39:06.50801 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="Update uid column values in alert_notification"
+2022-11-15_09:39:06.52184 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="Add unique index alert_notification_org_id_uid"
+2022-11-15_09:39:06.53565 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="Remove unique index org_id_name"
+2022-11-15_09:39:06.55040 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="Add column secure_settings in alert_notification"
+2022-11-15_09:39:06.56380 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="alter alert.settings to mediumtext"
+2022-11-15_09:39:06.57660 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="Add non-unique index alert_notification_state_alert_id"
+2022-11-15_09:39:06.58861 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="Add non-unique index alert_rule_tag_alert_id"
+2022-11-15_09:39:06.60210 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="Drop old annotation table v4"
+2022-11-15_09:39:06.61447 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="create annotation table v5"
+2022-11-15_09:39:06.62730 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="add index annotation 0 v3"
+2022-11-15_09:39:06.64004 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="add index annotation 1 v3"
+2022-11-15_09:39:06.65491 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="add index annotation 2 v3"
+2022-11-15_09:39:06.66822 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="add index annotation 3 v3"
+2022-11-15_09:39:06.68161 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="add index annotation 4 v3"
+2022-11-15_09:39:06.69388 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="Update annotation table charset"
+2022-11-15_09:39:06.70614 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="Add column region_id to annotation table"
+2022-11-15_09:39:06.71787 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="Drop category_id index"
+2022-11-15_09:39:06.73318 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="Add column tags to annotation table"
+2022-11-15_09:39:06.74534 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="Create annotation_tag table v2"
+2022-11-15_09:39:06.75736 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="Add unique index annotation_tag.annotation_id_tag_id"
+2022-11-15_09:39:06.77018 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="drop index UQE_annotation_tag_annotation_id_tag_id - v2"
+2022-11-15_09:39:06.78273 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="Rename table annotation_tag to annotation_tag_v2 - v2"
+2022-11-15_09:39:06.79741 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="Create annotation_tag table v3"
+2022-11-15_09:39:06.81038 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="create index UQE_annotation_tag_annotation_id_tag_id - Add unique index annotation_tag.annotation_id_tag_id V3"
+2022-11-15_09:39:06.82423 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="copy annotation_tag v2 to v3"
+2022-11-15_09:39:06.83752 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="drop table annotation_tag_v2"
+2022-11-15_09:39:06.84947 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="Update alert annotations and set TEXT to empty"
+2022-11-15_09:39:06.86084 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="Add created time to annotation table"
+2022-11-15_09:39:06.87502 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="Add updated time to annotation table"
+2022-11-15_09:39:06.88789 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="Add index for created in annotation table"
+2022-11-15_09:39:06.90137 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="Add index for updated in annotation table"
+2022-11-15_09:39:06.91385 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="Convert existing annotations from seconds to milliseconds"
+2022-11-15_09:39:06.92703 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="Add epoch_end column"
+2022-11-15_09:39:06.94166 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="Add index for epoch_end"
+2022-11-15_09:39:06.95468 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="Make epoch_end the same as epoch"
+2022-11-15_09:39:06.96777 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="Move region to single row"
+2022-11-15_09:39:06.97971 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="Remove index org_id_epoch from annotation table"
+2022-11-15_09:39:06.99248 t=2022-11-15T09:39:06+0000 lvl=info msg="Executing migration" logger=migrator id="Remove index org_id_dashboard_id_panel_id_epoch from annotation table"
+2022-11-15_09:39:07.00583 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="Add index for org_id_dashboard_id_epoch_end_epoch on annotation table"
+2022-11-15_09:39:07.01820 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="Add index for org_id_epoch_end_epoch on annotation table"
+2022-11-15_09:39:07.03544 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="Remove index org_id_epoch_epoch_end from annotation table"
+2022-11-15_09:39:07.05400 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="Add index for alert_id on annotation table"
+2022-11-15_09:39:07.06844 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="create test_data table"
+2022-11-15_09:39:07.08134 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="create dashboard_version table v1"
+2022-11-15_09:39:07.09457 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="add index dashboard_version.dashboard_id"
+2022-11-15_09:39:07.10706 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="add unique index dashboard_version.dashboard_id and dashboard_version.version"
+2022-11-15_09:39:07.12151 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="Set dashboard version to 1 where 0"
+2022-11-15_09:39:07.13497 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="save existing dashboard data in dashboard_version table v1"
+2022-11-15_09:39:07.14742 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="alter dashboard_version.data to mediumtext v1"
+2022-11-15_09:39:07.16089 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="create team table"
+2022-11-15_09:39:07.17776 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="add index team.org_id"
+2022-11-15_09:39:07.19022 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="add unique index team_org_id_name"
+2022-11-15_09:39:07.20308 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="create team member table"
+2022-11-15_09:39:07.21541 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="add index team_member.org_id"
+2022-11-15_09:39:07.22842 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="add unique index team_member_org_id_team_id_user_id"
+2022-11-15_09:39:07.24096 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="add index team_member.team_id"
+2022-11-15_09:39:07.25808 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="Add column email to team table"
+2022-11-15_09:39:07.27152 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="Add column external to team_member table"
+2022-11-15_09:39:07.28517 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="Add column permission to team_member table"
+2022-11-15_09:39:07.29806 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="create dashboard acl table"
+2022-11-15_09:39:07.31053 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="add index dashboard_acl_dashboard_id"
+2022-11-15_09:39:07.32290 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="add unique index dashboard_acl_dashboard_id_user_id"
+2022-11-15_09:39:07.33925 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="add unique index dashboard_acl_dashboard_id_team_id"
+2022-11-15_09:39:07.35841 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="save default acl rules in dashboard_acl table"
+2022-11-15_09:39:07.37150 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="delete acl rules for deleted dashboards and folders"
+2022-11-15_09:39:07.38429 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="create tag table"
+2022-11-15_09:39:07.39686 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="add index tag.key_value"
+2022-11-15_09:39:07.41011 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="create login attempt table"
+2022-11-15_09:39:07.42360 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="add index login_attempt.username"
+2022-11-15_09:39:07.43581 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="drop index IDX_login_attempt_username - v1"
+2022-11-15_09:39:07.44903 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="Rename table login_attempt to login_attempt_tmp_qwerty - v1"
+2022-11-15_09:39:07.46367 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="create login_attempt v2"
+2022-11-15_09:39:07.47739 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="create index IDX_login_attempt_username - v2"
+2022-11-15_09:39:07.49277 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="copy login_attempt v1 to v2"
+2022-11-15_09:39:07.50487 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="drop login_attempt_tmp_qwerty"
+2022-11-15_09:39:07.51778 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="create user auth table"
+2022-11-15_09:39:07.52998 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="create index IDX_user_auth_auth_module_auth_id - v1"
+2022-11-15_09:39:07.54179 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="alter user_auth.auth_id to length 190"
+2022-11-15_09:39:07.55391 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="Add OAuth access token to user_auth"
+2022-11-15_09:39:07.56754 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="Add OAuth refresh token to user_auth"
+2022-11-15_09:39:07.58159 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="Add OAuth token type to user_auth"
+2022-11-15_09:39:07.61018 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="Add OAuth expiry to user_auth"
+2022-11-15_09:39:07.62407 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="Add index to user_id column in user_auth"
+2022-11-15_09:39:07.64676 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="create server_lock table"
+2022-11-15_09:39:07.67651 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="add index server_lock.operation_uid"
+2022-11-15_09:39:07.69701 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="create user auth token table"
+2022-11-15_09:39:07.73863 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="add unique index user_auth_token.auth_token"
+2022-11-15_09:39:07.75838 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="add unique index user_auth_token.prev_auth_token"
+2022-11-15_09:39:07.78474 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="add index user_auth_token.user_id"
+2022-11-15_09:39:07.81031 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="Add revoked_at to the user auth token"
+2022-11-15_09:39:07.82414 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="create cache_data table"
+2022-11-15_09:39:07.83877 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="add unique index cache_data.cache_key"
+2022-11-15_09:39:07.85929 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="create short_url table v1"
+2022-11-15_09:39:07.87202 t=2022-11-15T09:39:07+0000 lvl=info msg="Executing migration" logger=migrator id="add index short_url.org_id-uid"
+2022-11-15_09:39:07.88669 t=2022-11-15T09:39:07+0000 lvl=info msg="migrations completed" logger=migrator performed=279 skipped=0 duration=3.823933814s
+2022-11-15_09:39:07.91378 t=2022-11-15T09:39:07+0000 lvl=info msg="Created default admin" logger=sqlstore user=admin
+2022-11-15_09:39:07.91397 t=2022-11-15T09:39:07+0000 lvl=info msg="Created default organization" logger=sqlstore
+2022-11-15_09:39:07.93403 t=2022-11-15T09:39:07+0000 lvl=info msg="Starting plugin search" logger=plugins
+2022-11-15_09:39:08.04236 t=2022-11-15T09:39:08+0000 lvl=info msg="External plugins directory created" logger=plugins directory=/var/opt/gitlab/grafana/data/plugins
+2022-11-15_09:39:08.05022 {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2022-11-15T09:39:08.050137Z","queryType":"exponential_heatmap_bucket_data"}
+2022-11-15_09:39:08.05023 {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2022-11-15T09:39:08.050206Z","queryType":"linear_heatmap_bucket_data"}
+2022-11-15_09:39:08.05024 {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2022-11-15T09:39:08.050214Z","queryType":"random_walk"}
+2022-11-15_09:39:08.05024 {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2022-11-15T09:39:08.050218Z","queryType":"predictable_pulse"}
+2022-11-15_09:39:08.05024 {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2022-11-15T09:39:08.050222Z","queryType":"predictable_csv_wave"}
+2022-11-15_09:39:08.05024 {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2022-11-15T09:39:08.050227Z","queryType":"random_walk_table"}
+2022-11-15_09:39:08.05025 {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2022-11-15T09:39:08.050231Z","queryType":"slow_query"}
+2022-11-15_09:39:08.05025 {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2022-11-15T09:39:08.050234Z","queryType":"no_data_points"}
+2022-11-15_09:39:08.05025 {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2022-11-15T09:39:08.050239Z","queryType":"datapoints_outside_range"}
+2022-11-15_09:39:08.05025 {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2022-11-15T09:39:08.050245Z","queryType":"manual_entry"}
+2022-11-15_09:39:08.05025 {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2022-11-15T09:39:08.050249Z","queryType":"csv_metric_values"}
+2022-11-15_09:39:08.05026 {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2022-11-15T09:39:08.050253Z","queryType":"streaming_client"}
+2022-11-15_09:39:08.05026 {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2022-11-15T09:39:08.050256Z","queryType":"live"}
+2022-11-15_09:39:08.05027 {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2022-11-15T09:39:08.050262Z","queryType":"grafana_api"}
+2022-11-15_09:39:08.05027 {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2022-11-15T09:39:08.050266Z","queryType":"arrow"}
+2022-11-15_09:39:08.05027 {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2022-11-15T09:39:08.050270Z","queryType":"annotations"}
+2022-11-15_09:39:08.05027 {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2022-11-15T09:39:08.050274Z","queryType":"table_static"}
+2022-11-15_09:39:08.05028 {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2022-11-15T09:39:08.050278Z","queryType":"random_walk_with_error"}
+2022-11-15_09:39:08.05028 {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2022-11-15T09:39:08.050281Z","queryType":"server_error_500"}
+2022-11-15_09:39:08.05029 {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2022-11-15T09:39:08.050284Z","queryType":"logs"}
+2022-11-15_09:39:08.05032 {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2022-11-15T09:39:08.050290Z","queryType":"node_graph"}
+2022-11-15_09:39:08.05032 {"@level":"debug","@message":"datasource: registering query type fallback handler","@timestamp":"2022-11-15T09:39:08.050314Z"}
+2022-11-15_09:39:08.05509 t=2022-11-15T09:39:08+0000 lvl=info msg="inserting datasource from configuration " logger=provisioning.datasources name="GitLab Omnibus" uid=
+2022-11-15_09:39:08.06770 t=2022-11-15T09:39:08+0000 lvl=eror msg="Failed to read plugin provisioning files from directory" logger=provisioning.plugins path=/var/opt/gitlab/grafana/provisioning/plugins error="open /var/opt/gitlab/grafana/provisioning/plugins: no such file or directory"
+2022-11-15_09:39:08.09411 t=2022-11-15T09:39:08+0000 lvl=info msg="HTTP Server Listen" logger=http.server address=127.0.0.1:3000 protocol=http subUrl=/-/grafana socket=
+2022-11-15_09:39:10.57449 t=2022-11-15T09:39:10+0000 lvl=info msg="Shutdown started" logger=server reason="System signal: terminated"
+2022-11-15_09:39:10.61947 t=2022-11-15T09:39:10+0000 lvl=info msg="Starting Grafana" logger=server version=7.5.11 commit=6f8c1d9fe4 branch=HEAD compiled=2021-10-05T11:14:33+0000
+2022-11-15_09:39:10.61950 t=2022-11-15T09:39:10+0000 lvl=info msg="Config loaded from" logger=settings file=/var/opt/gitlab/grafana/conf/defaults.ini
+2022-11-15_09:39:10.61950 t=2022-11-15T09:39:10+0000 lvl=info msg="Config loaded from" logger=settings file=/var/opt/gitlab/grafana/grafana.ini
+2022-11-15_09:39:10.61951 t=2022-11-15T09:39:10+0000 lvl=info msg="Path Home" logger=settings path=/var/opt/gitlab/grafana
+2022-11-15_09:39:10.61951 t=2022-11-15T09:39:10+0000 lvl=info msg="Path Data" logger=settings path=/var/opt/gitlab/grafana/data
+2022-11-15_09:39:10.61952 t=2022-11-15T09:39:10+0000 lvl=info msg="Path Logs" logger=settings path=/var/log/gitlab/grafana
+2022-11-15_09:39:10.61953 t=2022-11-15T09:39:10+0000 lvl=info msg="Path Plugins" logger=settings path=/var/opt/gitlab/grafana/data/plugins
+2022-11-15_09:39:10.61953 t=2022-11-15T09:39:10+0000 lvl=info msg="Path Provisioning" logger=settings path=/var/opt/gitlab/grafana/provisioning
+2022-11-15_09:39:10.61954 t=2022-11-15T09:39:10+0000 lvl=info msg="App mode production" logger=settings
+2022-11-15_09:39:10.62063 t=2022-11-15T09:39:10+0000 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+2022-11-15_09:39:10.62122 t=2022-11-15T09:39:10+0000 lvl=info msg="Starting DB migrations" logger=migrator
+2022-11-15_09:39:10.62768 t=2022-11-15T09:39:10+0000 lvl=info msg="migrations completed" logger=migrator performed=0 skipped=279 duration=537.538µs
+2022-11-15_09:39:10.62852 t=2022-11-15T09:39:10+0000 lvl=info msg="Starting plugin search" logger=plugins
+2022-11-15_09:39:10.65621 {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2022-11-15T09:39:10.656150Z","queryType":"exponential_heatmap_bucket_data"}
+2022-11-15_09:39:10.65626 {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2022-11-15T09:39:10.656256Z","queryType":"linear_heatmap_bucket_data"}
+2022-11-15_09:39:10.65629 {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2022-11-15T09:39:10.656278Z","queryType":"random_walk"}
+2022-11-15_09:39:10.65630 {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2022-11-15T09:39:10.656298Z","queryType":"predictable_pulse"}
+2022-11-15_09:39:10.65633 {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2022-11-15T09:39:10.656317Z","queryType":"predictable_csv_wave"}
+2022-11-15_09:39:10.65635 {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2022-11-15T09:39:10.656338Z","queryType":"random_walk_table"}
+2022-11-15_09:39:10.65637 {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2022-11-15T09:39:10.656359Z","queryType":"slow_query"}
+2022-11-15_09:39:10.65638 {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2022-11-15T09:39:10.656378Z","queryType":"no_data_points"}
+2022-11-15_09:39:10.65641 {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2022-11-15T09:39:10.656399Z","queryType":"datapoints_outside_range"}
+2022-11-15_09:39:10.65643 {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2022-11-15T09:39:10.656420Z","queryType":"manual_entry"}
+2022-11-15_09:39:10.65645 {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2022-11-15T09:39:10.656440Z","queryType":"csv_metric_values"}
+2022-11-15_09:39:10.65647 {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2022-11-15T09:39:10.656460Z","queryType":"streaming_client"}
+2022-11-15_09:39:10.65650 {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2022-11-15T09:39:10.656479Z","queryType":"live"}
+2022-11-15_09:39:10.65652 {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2022-11-15T09:39:10.656517Z","queryType":"grafana_api"}
+2022-11-15_09:39:10.65655 {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2022-11-15T09:39:10.656539Z","queryType":"arrow"}
+2022-11-15_09:39:10.65659 {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2022-11-15T09:39:10.656571Z","queryType":"annotations"}
+2022-11-15_09:39:10.65662 {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2022-11-15T09:39:10.656603Z","queryType":"table_static"}
+2022-11-15_09:39:10.65664 {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2022-11-15T09:39:10.656632Z","queryType":"random_walk_with_error"}
+2022-11-15_09:39:10.65667 {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2022-11-15T09:39:10.656661Z","queryType":"server_error_500"}
+2022-11-15_09:39:10.65670 {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2022-11-15T09:39:10.656689Z","queryType":"logs"}
+2022-11-15_09:39:10.65673 {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2022-11-15T09:39:10.656717Z","queryType":"node_graph"}
+2022-11-15_09:39:10.65676 {"@level":"debug","@message":"datasource: registering query type fallback handler","@timestamp":"2022-11-15T09:39:10.656745Z"}
+2022-11-15_09:39:10.70134 t=2022-11-15T09:39:10+0000 lvl=eror msg="Failed to read plugin provisioning files from directory" logger=provisioning.plugins path=/var/opt/gitlab/grafana/provisioning/plugins error="open /var/opt/gitlab/grafana/provisioning/plugins: no such file or directory"
+2022-11-15_09:39:10.71474 t=2022-11-15T09:39:10+0000 lvl=info msg="HTTP Server Listen" logger=http.server address=127.0.0.1:3000 protocol=http subUrl=/-/grafana socket=
+2022-11-15_10:22:02.32031 t=2022-11-15T10:22:02+0000 lvl=info msg="Shutdown started" logger=server reason="System signal: terminated"
