@@ -1,0 +1,3 @@
+2023/03/24 13:24:52 [emerg] 9#9: host not found in upstream "php-fpm-81" in /etc/nginx/sites-available/bbs.liaofeng.test.conf:25
+2023/03/24 13:53:18 [emerg] 9#9: host not found in upstream "php-fpm-81" in /etc/nginx/sites-available/bbs.liaofeng.test.conf:25
+2023/03/24 13:54:46 [emerg] 9#9: host not found in upstream "php-fpm-80" in /etc/nginx/sites-available/disputes.liaofeng.test.conf:24

@@ -1,0 +1,8 @@
+172.19.0.1 - - [27/Mar/2023:02:38:42 +0000] "GET / HTTP/1.1" 500 234161 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.87 Safari/537.36 SE 2.X MetaSr 1.0"
+172.19.0.1 - - [28/Mar/2023:01:53:11 +0000] "GET / HTTP/1.1" 500 234196 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.87 Safari/537.36 SE 2.X MetaSr 1.0"
+172.19.0.1 - - [28/Mar/2023:10:16:01 +0000] "GET /admin/user/auth/login HTTP/1.1" 404 181 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36 Edg/111.0.1661.54"
+172.19.0.1 - - [28/Mar/2023:10:16:02 +0000] "GET /favicon.ico HTTP/1.1" 200 0 "http://jyqshop.frp.codefriend.top/admin/user/auth/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36 Edg/111.0.1661.54"
+172.19.0.1 - - [29/Mar/2023:02:36:51 +0000] "GET / HTTP/1.1" 500 234178 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.87 Safari/537.36 SE 2.X MetaSr 1.0"
+172.19.0.1 - - [29/Mar/2023:18:00:09 +0000] "GET / HTTP/1.1" 500 234178 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.87 Safari/537.36 SE 2.X MetaSr 1.0"
+172.19.0.1 - - [31/Mar/2023:04:09:49 +0000] "GET / HTTP/1.1" 500 234153 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.87 Safari/537.36 SE 2.X MetaSr 1.0"
+172.19.0.1 - - [03/Apr/2023:01:30:57 +0000] "GET / HTTP/1.1" 500 234114 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.87 Safari/537.36 SE 2.X MetaSr 1.0"
