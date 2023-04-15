@@ -1,3 +1,31 @@
 2023/03/24 13:24:52 [emerg] 9#9: host not found in upstream "php-fpm-81" in /etc/nginx/sites-available/bbs.liaofeng.test.conf:25
 2023/03/24 13:53:18 [emerg] 9#9: host not found in upstream "php-fpm-81" in /etc/nginx/sites-available/bbs.liaofeng.test.conf:25
 2023/03/24 13:54:46 [emerg] 9#9: host not found in upstream "php-fpm-80" in /etc/nginx/sites-available/disputes.liaofeng.test.conf:24
+2023/04/15 14:32:01 [warn] 47#47: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2023/04/15 14:33:15 [warn] 53#53: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2023/04/15 14:33:15 [notice] 53#53: signal process started
+2023/04/15 15:02:46 [notice] 72#72: signal process started
+2023/04/15 15:05:53 [warn] 83#83: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2023/04/15 15:05:55 [warn] 89#89: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2023/04/15 15:05:55 [notice] 89#89: signal process started
+2023/04/15 15:06:57 [notice] 99#99: signal process started
+2023/04/15 15:18:49 [emerg] 110#110: cannot load certificate "/etc/nginx/ssl/server.crt": BIO_new_file() failed (SSL: error:80000002:system library::No such file or directory:calling fopen(/etc/nginx/ssl/server.crt, r) error:10000080:BIO routines::no such file)
+2023/04/15 15:21:30 [emerg] 116#116: cannot load certificate key "/etc/nginx/ssl/server.key": PEM_read_bio_PrivateKey() failed (SSL: error:1C800064:Provider routines::bad decrypt error:11800074:PKCS12 routines::pkcs12 cipherfinal error:maybe wrong password error:1C800064:Provider routines::bad decrypt error:11800074:PKCS12 routines::pkcs12 cipherfinal error:maybe wrong password)
+2023/04/15 15:21:48 [notice] 128#128: signal process started
+Enter PEM pass phrase:
+Enter PEM pass phrase:
+2023/04/15 15:21:52 [emerg] 9#9: cannot load certificate key "/etc/nginx/ssl/server.key": PEM_read_bio_PrivateKey() failed (SSL: error:1400006B:UI routines::processing error:while reading strings error:0480006D:PEM routines::problems getting password error:07880109:common libcrypto routines::interrupted or cancelled error:07880109:common libcrypto routines::interrupted or cancelled error:1C80009F:Provider routines::unable to get passphrase error:1400006B:UI routines::processing error:while reading strings error:0480006D:PEM routines::problems getting password error:07880109:common libcrypto routines::interrupted or cancelled error:04800068:PEM routines::bad password read)
+2023/04/15 15:36:47 [emerg] 135#135: no "ssl_certificate" is defined for the "listen ... ssl" directive in /etc/nginx/sites-available/default.ssl.conf:1
+2023/04/15 15:37:24 [emerg] 141#141: cannot load certificate key "/etc/nginx/ssl/server.key": PEM_read_bio_PrivateKey() failed (SSL: error:1C800064:Provider routines::bad decrypt error:11800074:PKCS12 routines::pkcs12 cipherfinal error:maybe wrong password error:1C800064:Provider routines::bad decrypt error:11800074:PKCS12 routines::pkcs12 cipherfinal error:maybe wrong password)
+2023/04/15 15:37:34 [emerg] 147#147: cannot load certificate key "/etc/nginx/ssl/server.key": PEM_read_bio_PrivateKey() failed (SSL: error:1C800064:Provider routines::bad decrypt error:11800074:PKCS12 routines::pkcs12 cipherfinal error:empty password error:1C800064:Provider routines::bad decrypt error:11800074:PKCS12 routines::pkcs12 cipherfinal error:empty password)
+2023/04/15 15:37:42 [emerg] 153#153: cannot load certificate key "/etc/nginx/ssl/server.key": PEM_read_bio_PrivateKey() failed (SSL: error:1C800064:Provider routines::bad decrypt error:11800074:PKCS12 routines::pkcs12 cipherfinal error:empty password error:1C800064:Provider routines::bad decrypt error:11800074:PKCS12 routines::pkcs12 cipherfinal error:empty password)
+2023/04/15 15:37:48 [notice] 159#159: signal process started
+Enter PEM pass phrase:
+Enter PEM pass phrase:
+2023/04/15 15:37:49 [emerg] 9#9: cannot load certificate key "/etc/nginx/ssl/server.key": PEM_read_bio_PrivateKey() failed (SSL: error:1400006B:UI routines::processing error:while reading strings error:0480006D:PEM routines::problems getting password error:07880109:common libcrypto routines::interrupted or cancelled error:07880109:common libcrypto routines::interrupted or cancelled error:1C80009F:Provider routines::unable to get passphrase error:1400006B:UI routines::processing error:while reading strings error:0480006D:PEM routines::problems getting password error:07880109:common libcrypto routines::interrupted or cancelled error:04800068:PEM routines::bad password read)
+2023/04/15 15:39:09 [notice] 165#165: signal process started
+2023/04/15 15:39:12 [notice] 175#175: signal process started
+2023/04/15 15:41:59 [notice] 191#191: signal process started
+Enter PEM pass phrase:
+Enter PEM pass phrase:
+2023/04/15 15:42:02 [emerg] 9#9: cannot load certificate key "/etc/nginx/ssl/default.key": PEM_read_bio_PrivateKey() failed (SSL: error:1400006B:UI routines::processing error:while reading strings error:0480006D:PEM routines::problems getting password error:07880109:common libcrypto routines::interrupted or cancelled error:07880109:common libcrypto routines::interrupted or cancelled error:1C80009F:Provider routines::unable to get passphrase error:1400006B:UI routines::processing error:while reading strings error:0480006D:PEM routines::problems getting password error:07880109:common libcrypto routines::interrupted or cancelled error:04800068:PEM routines::bad password read)
