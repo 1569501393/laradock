@@ -32,3 +32,14 @@ Enter PEM pass phrase:
 2023/04/17 01:29:38 [emerg] 9#9: cannot load certificate key "/etc/nginx/ssl/default.key": PEM_read_bio_PrivateKey() failed (SSL: error:1400006B:UI routines::processing error:while reading strings error:0480006D:PEM routines::problems getting password error:07880109:common libcrypto routines::interrupted or cancelled error:07880109:common libcrypto routines::interrupted or cancelled error:1C80009F:Provider routines::unable to get passphrase error:1400006B:UI routines::processing error:while reading strings error:0480006D:PEM routines::problems getting password error:07880109:common libcrypto routines::interrupted or cancelled error:04800068:PEM routines::bad password read)
 2023/04/21 02:05:07 [notice] 142#142: signal process started
 2023/06/14 03:21:23 [notice] 40#40: signal process started
+2023/08/08 03:53:25 [notice] 157#157: signal process started
+2023/08/08 04:04:37 [emerg] 169#169: cannot load certificate "/etc/nginx/certificate.crt": BIO_new_file() failed (SSL: error:80000002:system library::No such file or directory:calling fopen(/etc/nginx/certificate.crt, r) error:10000080:BIO routines::no such file)
+2023/08/08 04:05:28 [emerg] 175#175: cannot load certificate "/etc/nginx/certificate.crt": BIO_new_file() failed (SSL: error:80000002:system library::No such file or directory:calling fopen(/etc/nginx/certificate.crt, r) error:10000080:BIO routines::no such file)
+2023/08/08 04:06:10 [emerg] 181#181: cannot load certificate "/etc/nginx/certificate.crt": BIO_new_file() failed (SSL: error:80000002:system library::No such file or directory:calling fopen(/etc/nginx/certificate.crt, r) error:10000080:BIO routines::no such file)
+2023/08/08 04:06:15 [emerg] 187#187: cannot load certificate "/etc/nginx/certificate.crt": BIO_new_file() failed (SSL: error:80000002:system library::No such file or directory:calling fopen(/etc/nginx/certificate.crt, r) error:10000080:BIO routines::no such file)
+2023/08/08 04:06:18 [emerg] 193#193: cannot load certificate "/etc/nginx/certificate.crt": BIO_new_file() failed (SSL: error:80000002:system library::No such file or directory:calling fopen(/etc/nginx/certificate.crt, r) error:10000080:BIO routines::no such file)
+2023/08/08 04:06:20 [emerg] 199#199: cannot load certificate "/etc/nginx/certificate.crt": BIO_new_file() failed (SSL: error:80000002:system library::No such file or directory:calling fopen(/etc/nginx/certificate.crt, r) error:10000080:BIO routines::no such file)
+2023/08/08 04:07:00 [notice] 223#223: signal process started
+2023/08/08 04:50:17 [notice] 242#242: signal process started
+2023/08/08 04:51:47 [notice] 252#252: signal process started
+2023/08/08 06:10:02 [notice] 275#275: signal process started
