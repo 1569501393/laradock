@@ -2099,3 +2099,29 @@ services:
         - frontend
         - backend
       restart: always
+
+### hyperf Utilities ##################################
+    hyperf:
+      image: hyperf/hyperf:8.1-alpine-v3.16-swoole-v5.0.3
+      container_name: hyperf2
+      volumes:
+#        - /workspace/skeleton:/data/project
+        - ${APP_CODE_PATH_HOST}:/data/project
+      ports:
+        - "9502:9501"
+      stdin_open: true
+      tty: true
+      privileged: true
+      user: root
+      entrypoint: /bin/sh
+#      volumes:
+#        - ${APP_CODE_PATH_HOST}:${APP_CODE_PATH_CONTAINER}${APP_CODE_CONTAINER_FLAG}
+#        - docker-in-docker:/certs/client
+#        - ./php-worker/supervisord.d:/etc/supervisord.d
+      extra_hosts:
+        - "dockerhost:${DOCKER_HOST_IP}"
+      networks:
+        - frontend
+        - backend
+      links:
+        - docker-in-docker
