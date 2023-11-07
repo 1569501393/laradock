@@ -43,3 +43,25 @@ Enter PEM pass phrase:
 2023/08/08 04:50:17 [notice] 242#242: signal process started
 2023/08/08 04:51:47 [notice] 252#252: signal process started
 2023/08/08 06:10:02 [notice] 275#275: signal process started
+2023/09/05 07:46:54 [emerg] 13#13: cannot load certificate "/etc/nginx/ssl/certificate.crt": BIO_new_file() failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/ssl/certificate.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2023/09/05 08:03:05 [emerg] 9#9: cannot load certificate "/etc/nginx/ssl/certificate.crt": BIO_new_file() failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/ssl/certificate.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2023/09/05 08:08:14 [emerg] 9#9: cannot load certificate "/etc/nginx/ssl/certificate2.crt": BIO_new_file() failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/ssl/certificate2.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2023/10/17 02:21:10 [notice] 149#149: signal process started
+2023/10/17 02:25:09 [emerg] 177#177: unexpected "}" in /etc/nginx/sites-available/hermes.liaofeng.test.conf:57
+2023/10/17 02:26:38 [notice] 189#189: signal process started
+2023/10/27 02:35:08 [notice] 383#383: signal process started
+2023/10/27 04:37:31 [emerg] 16#16: a duplicate default server for 0.0.0.0:80 in /etc/nginx/sites-available/dev-bi-frontend-xgrit.lfsz.codefriend.test.conf:3
+2023/10/27 04:37:55 [warn] 22#22: conflicting server name "dev-bi-frontend-xgrit.lfsz.codefriend.test" on 0.0.0.0:80, ignored
+2023/10/27 04:37:55 [warn] 22#22: conflicting server name "dev-bi-frontend-xgrit.lfsz.codefriend.test" on [::]:80, ignored
+2023/10/27 04:38:55 [warn] 28#28: conflicting server name "dev-bi-frontend-xgrit.lfsz.codefriend.test" on 0.0.0.0:80, ignored
+2023/10/27 04:38:55 [warn] 28#28: conflicting server name "dev-bi-frontend-xgrit.lfsz.codefriend.test" on [::]:80, ignored
+2023/10/27 04:38:55 [notice] 28#28: signal process started
+2023/10/27 04:43:50 [notice] 44#44: signal process started
+2023/10/27 06:21:53 [emerg] 63#63: duplicate location "/" in /etc/nginx/sites-available/analysis.liaofeng.test.conf:31
+2023/10/27 06:22:22 [notice] 75#75: signal process started
+2023/10/27 06:27:39 [emerg] 86#86: host not found in upstream "dev-lf-analysis.lfsz.codefriend.test" in /etc/nginx/sites-available/dev-bi-frontend-xgrit.lfsz.codefriend.test.conf:25
+2023/10/27 06:27:42 [emerg] 92#92: host not found in upstream "dev-lf-analysis.lfsz.codefriend.test" in /etc/nginx/sites-available/dev-bi-frontend-xgrit.lfsz.codefriend.test.conf:25
+2023/10/27 06:29:18 [notice] 110#110: signal process started
+2023/10/27 07:19:02 [emerg] 125#125: host not found in upstream "dev-lf-analysis.lfsz.codefriend.test" in /etc/nginx/sites-available/dev-bi-frontend-xgrit.lfsz.codefriend.test.conf:25
+2023/10/27 07:22:33 [emerg] 132#132: invalid URL prefix in /etc/nginx/sites-available/dev-bi-frontend-xgrit.lfsz.codefriend.test.conf:27
+2023/10/27 07:22:54 [notice] 138#138: signal process started
