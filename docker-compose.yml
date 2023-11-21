@@ -2102,13 +2102,14 @@ services:
 
 ### hyperf Utilities ##################################
     hyperf:
-      image: hyperf/hyperf:8.1-alpine-v3.16-swoole-v5.0.3
-      container_name: hyperf2
+#      image: hyperf/hyperf:8.1-alpine-v3.16-swoole-v5.0.3
+      image: registry.internal.codefriend.top/base/hyperf:8.2-alpine-v3.18-swoole
+      container_name: hyperf
       volumes:
 #        - /workspace/skeleton:/data/project
         - ${APP_CODE_PATH_HOST}:/data/project
       ports:
-        - "9502:9501"
+        - "9501:9501"
       stdin_open: true
       tty: true
       privileged: true
