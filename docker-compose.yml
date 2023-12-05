@@ -2103,22 +2103,21 @@ services:
 ### hyperf Utilities ##################################
     hyperf:
 #      image: hyperf/hyperf:8.1-alpine-v3.16-swoole-v5.0.3
-      image: registry.internal.codefriend.top/base/hyperf:8.2-alpine-v3.18-swoole
+#      image: registry.internal.codefriend.top/base/hyperf:8.2-alpine-v3.18-swoole
+      image: hyperf-with-pgsql
       container_name: hyperf
       volumes:
 #        - /workspace/skeleton:/data/project
         - ${APP_CODE_PATH_HOST}:/data/project
+      working_dir: /data/project
       ports:
-        - "9501:9501"
+        - "9502:9501"
       stdin_open: true
       tty: true
       privileged: true
       user: root
       entrypoint: /bin/sh
-#      volumes:
-#        - ${APP_CODE_PATH_HOST}:${APP_CODE_PATH_CONTAINER}${APP_CODE_CONTAINER_FLAG}
-#        - docker-in-docker:/certs/client
-#        - ./php-worker/supervisord.d:/etc/supervisord.d
+#      entrypoint: /bin/sh -c "cd /data/project && /bin/sh"
       extra_hosts:
         - "dockerhost:${DOCKER_HOST_IP}"
       networks:
