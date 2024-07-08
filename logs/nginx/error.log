@@ -66,3 +66,9 @@ Enter PEM pass phrase:
 2023/10/27 07:22:33 [emerg] 132#132: invalid URL prefix in /etc/nginx/sites-available/dev-bi-frontend-xgrit.lfsz.codefriend.test.conf:27
 2023/10/27 07:22:54 [notice] 138#138: signal process started
 2023/11/28 09:25:30 [notice] 14#14: signal process started
+2023/12/08 03:52:08 [notice] 21#21: signal process started
+2023/12/08 04:02:11 [notice] 33#33: signal process started
+2023/12/08 04:07:59 [notice] 43#43: signal process started
+2024/01/08 03:41:57 [emerg] 9#9: host not found in upstream "analysis.frp.codefriend.top" in /etc/nginx/sites-available/dev-bi-frontend-xgrit.lfsz.codefriend.test.conf:27
+2024/02/04 02:18:39 [notice] 2220#2220: signal process started
+2024/04/28 02:01:56 [emerg] 9#9: host not found in upstream "analysis.frp.codefriend.top" in /etc/nginx/sites-available/dev-bi-frontend-xgrit.lfsz.codefriend.test.conf:27

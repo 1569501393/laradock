@@ -439,6 +439,7 @@ services:
         - "${VARNISH_BACKEND_PORT}:81"
       depends_on:
         - php-fpm
+#        - hyperf
       networks:
         - frontend
         - backend
@@ -2104,7 +2105,9 @@ services:
     hyperf:
 #      image: hyperf/hyperf:8.1-alpine-v3.16-swoole-v5.0.3
 #      image: registry.internal.codefriend.top/base/hyperf:8.2-alpine-v3.18-swoole
-      image: hyperf-with-pgsql
+#      image: hyperf-with-pgsql
+#      image: registry.internal.codefriend.top/base/hyperf:8.2-alpine-v3.18-swoole-v0.4.4
+      image: registry.internal.codefriend.top/base/hyperf:8.2-alpine-v3.18-swoole-v0.4.5
       container_name: hyperf
       volumes:
 #        - /workspace/skeleton:/data/project
