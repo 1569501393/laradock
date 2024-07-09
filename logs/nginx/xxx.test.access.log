@@ -558,3 +558,6 @@
 172.22.0.1 - - [04/Jul/2024:03:20:18 +0000] "GET /test/ HTTP/1.1" 200 403 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
 172.22.0.1 - - [04/Jul/2024:03:20:22 +0000] "GET /test/phpinfo.php HTTP/1.1" 200 31242 "http://localhost/test/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
 172.22.0.1 - - [08/Jul/2024:09:57:16 +0000] "GET /long_run.php HTTP/1.1" 404 146 "-" "curl/7.81.0"
+172.22.0.1 - - [08/Jul/2024:11:08:42 +0000] "GET / HTTP/1.1" 200 680 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+172.22.0.1 - - [08/Jul/2024:11:08:45 +0000] "GET /test/ HTTP/1.1" 200 403 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+172.22.0.1 - - [08/Jul/2024:11:08:51 +0000] "GET /test/phpinfo.php HTTP/1.1" 200 31235 "http://localhost/test/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"

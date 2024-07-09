@@ -1,18 +1,14 @@
 <?php
-// $mysqli = new mysqli("mysql", "testuser", "testpassword", "testdb");
-$mysqli = new mysqli("mysql", "testuser", "testpassword", "testdb", '33060');
+// 设置较短的连接超时时间
+ini_set('mysqli.connect_timeout', 5);
 
-if ($mysqli->connect_error) {
-    die("Connection failed: " . $mysqli->connect_error);
+try {
+    $mysqli = new mysqli("mysql", "user", "password", "mydb", '33060');
+
+    if ($mysqli->connect_error) {
+        throw new Exception("Connection failed: " . $mysqli->connect_error);
+    }
+    echo "Connected successfully";
+} catch (Exception $e) {
+    echo $e->getMessage();
 }
-
-// sleep(60); // 模拟长时间查询
-
-if ($mysqli->query("SELECT 1") === TRUE) {
-    echo "Query succeeded";
-} else {
-    echo "Error: " . $mysqli->error;
-}
-
-$mysqli->close();
-?>
