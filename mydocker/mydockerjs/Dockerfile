@@ -2,6 +2,9 @@
 # docker run -it jieqiang2020/hello-node:v1.3 bash
 # docker run jieqiang2020/hello-node:v1.3
 # 添加注释，方便以后维护
+# Docker Tutorial for Beginners
+# Programming with Mosh
+# https://www.youtube.com/watch?v=pTFZFxd4hOI&list=TLPQMDEwODIwMjTQNT0iNOgosg&index=2
 FROM node
 
 # 自动创建目录
